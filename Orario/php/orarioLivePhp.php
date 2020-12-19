@@ -26,6 +26,7 @@
 
 </body>
 
+<!-- Questa parte di codice serve per far funzionare il live server -->
 <?php 
     require_once "..\phpReloader\src\HotReloader.php";
     new HotReloader\HotReloader('//localhost/schoolHours/Orario/phpReloader/phrwatcher.php');
