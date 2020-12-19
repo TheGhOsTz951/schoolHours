@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Montserrat', sans-serif;
+
+    /* Background gradient */
+    background: hsla(298, 68%, 90%, 1);
+    background: linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F6D5F7", endColorstr="#FBE9D7", GradientType=1 );
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* User cant select */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* --- TITLE SECTION --- */
+
+.div-title {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+/* --- TABLE SECTION --- */
+
+.div-table {
+    overflow-x: auto;
+}
+
+.table {
+    margin: 0 auto 20px;
+    width: 100rem;
+    text-align: center;
+    border-collapse: collapse;
+    border: 2px solid black;
+    table-layout: fixed;
+}
+
+.table th, .table td {
+    height: 2rem;
+    width: 9rem;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+td.actual {
+    font-weight: bold;
+    border: 5px solid black;
+}
+
+.ggActual {
+    font-weight: bold;
+    background-color: white;
+    color: black;
+}
+
+.none {
+    display: none;
+}
+
+/* --- CODE SECTION --- */
+
+#div-code {
+    display: none;
+    margin: 20px auto;
+    padding: 35px 15px;
+    max-width: 300px;
+    text-align: center;
+
+    border-radius: 15px;
+    box-shadow: 0pt 2pt 12pt 2pt gray;
+
+    /* User can select */
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+#codeTxt {
+    font-size: 32px;
+    margin: 0;
+}
+
+/* --- TABLE ELEMENTS SECTION --- */
+
+.blank, .ora {
+    background-color: white;
+}
+
+.info {
+    background-color: #e63946;
+    color: white;
+}
+
+.infoLab {
+    background-color: #ED707B;
+    color: white;
+}
+
+.mot {
+    background-color: #fca311;
+}
+
+.ita {
+    background-color: #3d5a80;
+    color: white;
+}
+
+.sto {
+    background-color: #403d39;
+    color: white;
+}
+
+.gpo {
+    background-color: #7209b7;
+    color: white;
+}
+
+.gpoLab {
+    background-color: #A327F5;
+    color: white;
+}
+
+.sis {
+    background-color: #2d6a4f;
+    color: white;
+}
+
+.sisLab {
+    background-color: #4DB385;
+    color: white;
+}
+
+.tpit {
+    background-color: #DB3A00;
+    color: white;
+}
+
+.tpitLab {
+    background-color: #ff6b35;
+    color: white;
+}
+
+.mat {
+    background-color: #f9dc5c;
+}
+
+.ing {
+    background-color: #001f54;
+    color: white;
+}
+
+.rel {
+    background-color: #f2f5ff;
+}
+
+/* --- MOBILE SECTION --- */
+@media only screen and (max-width: 600px) {
+    .div-title {
+        margin: 0 10px 20px;
+        font-size: 12px;
+    }
+
+    .div-table {
+        margin: 0 10px;
+    }
+
+    .table {
+        font-size: 8px;
+        width: 30rem;
+    }
+
+    .table th, .table td {
+        padding: 5px;
+        width: 3rem;
+        height: 1rem;
+    }
+
+    #div-code {
+        max-width: 10rem;
+        padding: 20px 15px;
+    }
+
+    #codeTxt {
+        font-size: 12px;
+    }
+  }
