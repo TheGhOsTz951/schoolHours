@@ -28,7 +28,7 @@
 
 <?php 
     require_once "..\phpReloader\src\HotReloader.php";
-    new HotReloader\HotReloader('//localhost/Orario/phpReloader/phrwatcher.php');
+    new HotReloader\HotReloader('//localhost/schoolHours/Orario/phpReloader/phrwatcher.php');
 ?>
 
 <script src="../js/orario.js?version=6"></script>
