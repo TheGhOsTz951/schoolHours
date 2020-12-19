@@ -1,3 +1,5 @@
+var timeout;
+
 window.onload = function() {
     actualLesson();
 };
@@ -9,6 +11,10 @@ function showCode(tdId) {
 
     let codeText = document.getElementById("codeTxt");
     let codeDiv = document.getElementById("div-code");
+    let copyDiv = document.getElementById("div-copy");
+
+    clearTimeout(timeout);
+    $('#div-copy').hide();
 
     if (span === "0" || span === null) {
         codeDiv.style.display = "none";
@@ -28,6 +34,22 @@ function showCode(tdId) {
 
         location.href = "#";
         location.href = "#div-code";
+
+        // Output done copy
+        let copyTxt = document.getElementById("copyTxt");
+        copyTxt.innerHTML = "Codice " + span +  " copiato";
+
+        // Prende la posizione della casella
+        //let x = (td.offsetLeft) + "px";
+        //let y = (td.offsetTop) + "px";
+
+        // Modifica css del popup
+        //$('#div-copy').css({'background-color':td.style.backgroundColor});
+        copyDiv.className = td.className;
+        $('#div-copy').fadeIn(500);
+        timeout = setTimeout(function() { 
+            $('#div-copy').fadeOut(); 
+        }, 3000);
     }
 }
 
@@ -48,7 +70,7 @@ function actualLesson() {
     ggLesson.className = "ggActual";
     ggLesson.innerHTML += " (Oggi)";
 
-    if ((hours <= 8 && minutes < 5) || (hours >= 12 && minutes > 55)) return;
+    if (hours < 8 || hours > 12) return;
 
     if (gg === 2 || gg === 5) {
         console.log("Da fare");

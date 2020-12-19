@@ -24,6 +24,10 @@
         <p id="codeTxt"></p>
     </div>
 
+    <div id="div-copy">
+        <p id="copyTxt"></p>
+    </div>
+
 </body>
 
 <!-- Questa parte di codice serve per far funzionare il live server -->
@@ -33,6 +37,7 @@
 ?>
 
 <script src="../js/orario.js?version=6"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </html>
 

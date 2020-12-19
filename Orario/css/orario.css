@@ -97,6 +97,26 @@ td.actual {
     margin: 0;
 }
 
+/* --- COPY POPUP SECTION --- */
+
+#div-copy {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 400px;
+    border-radius: 15px;
+    border: 0px solid black;
+    box-shadow: 0pt 2pt 7pt 0pt black;
+}
+
+#copyTxt {
+    font-size: 24px;
+    text-align: center;
+}
+  
 /* --- TABLE ELEMENTS SECTION --- */
 
 .blank, .ora {
