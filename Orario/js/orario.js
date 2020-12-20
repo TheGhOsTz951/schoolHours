@@ -37,21 +37,17 @@ function showCode(tdId) {
         document.execCommand("Copy");
         textArea.remove();
 
-        location.href = "#";
-        location.href = "#div-code";
-
         // Output done copy
         let copyTxt = document.getElementById("copyTxt");
         copyTxt.innerHTML = "Codice " + span +  " copiato";
-
-        // Prende la posizione della casella
-        //let x = (td.offsetLeft) + "px";
-        //let y = (td.offsetTop) + "px";
-
-        // Modifica css del popup
-        //$('#div-copy').css({'background-color':td.style.backgroundColor});
+        
+        // Modifica css del popup e fa output
         copyDiv.className = td.className;
         $('#div-copy').fadeIn(500);
+        
+        location.href = "#";
+        location.href = "#div-copy";
+
         timeout = setTimeout(function() { 
             $('#div-copy').fadeOut(); 
         }, 2000);

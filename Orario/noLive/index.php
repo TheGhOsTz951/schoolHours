@@ -32,7 +32,7 @@
 
 </body>
 
-<script src="../js/orario.js?version=8"></script>
+<script src="../js/orario.js?version=10"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </html>
