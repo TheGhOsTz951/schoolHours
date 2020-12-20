@@ -57,13 +57,13 @@ function showCode(tdId) {
 function actualLesson() {
     let date = new Date();
 
+    let minDate = (8 * 60) + 5; // 8 = hours, 60 = minutes per hours, 5 = minutes
+    let maxDate = (13 * 60);
+
     let gg = date.getDay();
     let hours = date.getHours();
     let minutes = date.getMinutes();
-
-    let selId;
-
-    console.log(gg + " - " + hours + " - " + minutes);
+    let actualDate = (hours * 60) + minutes;
 
     if (gg === 0) return;
 
@@ -71,21 +71,18 @@ function actualLesson() {
     ggLesson.className = "ggActual";
     ggLesson.innerHTML += " (Oggi)";
 
-    if (hours < 8 || hours > 12) return;
+    if (actualDate < minDate || actualDate > maxDate) return;
+
+    let timeStep;
 
     if (gg === 2 || gg === 5) {
-        //let minGap = (hours - 8) * 10;
-
-        //if (minutes <)
-
-        return;
+        timeStep = 50;
     } else {
-        selId = gg + (7 * (hours - 8));
-
-        if (minutes < 5) {
-            selId = selId - 7;
-        }
+        timeStep = 60;
     }
+
+    // Formula matematica trovata pensando :D
+    let selId = gg + (7 * (Math.floor((actualDate - minDate) / timeStep)));
 
     let lesson = document.getElementById(selId);
     lesson.className += " actual";

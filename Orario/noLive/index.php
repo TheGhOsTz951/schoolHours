@@ -8,8 +8,8 @@
     <meta http-equiv='pragma' content='no-cache'> 
     <title>Orario 5AINF | AleSite</title>
 
-    <link rel="stylesheet" href="../css/orario.css?version=9">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/orarioMobile.css?version=9">
+    <link rel="stylesheet" href="../css/orario.css?version=10">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/orarioMobile.css?version=10">
 </head>
 <body>
     <div class="div-title">
@@ -32,7 +32,7 @@
 
 </body>
 
-<script src="../js/orario.js?version=10"></script>
+<script src="../js/orario.js?version=11"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </html>
