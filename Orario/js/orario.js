@@ -8,21 +8,26 @@ function showCode(tdId) {
     let td = document.getElementById(tdId);
     let span = document.getElementById("span" + tdId);
     span = span.innerHTML;
-
-    let codeText = document.getElementById("codeTxt");
-    let codeDiv = document.getElementById("div-code");
+    
     let copyDiv = document.getElementById("div-copy");
+    let codeDiv = document.getElementById("div-code");
 
     clearTimeout(timeout);
     $('#div-copy').hide();
 
     if (span === "0" || span === null) {
-        codeDiv.style.display = "none";
-    } else {
-        codeDiv.className = td.className;
+        codeDiv.className = "div-code";
 
-        codeDiv.style.display = "block";
-        codeText.innerHTML = span;
+        $('#codeTxt').text("Clicca su una materia per visualizzare e copiare il codice");
+        $('#code').hide();
+        $('#code').text("");
+    } else {
+        codeDiv.className = "div-code";
+        codeDiv.className += " codeShow";
+
+        $('#codeTxt').text("Codice:");
+        $('#code').text(span);
+        $('#code').css({'display':'inline', 'text-decoration':'underline'});
 
         // Copy span text to clipboard
         let textArea = document.createElement("textarea");
@@ -49,7 +54,7 @@ function showCode(tdId) {
         $('#div-copy').fadeIn(500);
         timeout = setTimeout(function() { 
             $('#div-copy').fadeOut(); 
-        }, 3000);
+        }, 2000);
     }
 }
 
@@ -73,7 +78,10 @@ function actualLesson() {
     if (hours < 8 || hours > 12) return;
 
     if (gg === 2 || gg === 5) {
-        console.log("Da fare");
+        //let minGap = (hours - 8) * 10;
+
+        //if (minutes <)
+
         return;
     } else {
         selId = gg + (7 * (hours - 8));

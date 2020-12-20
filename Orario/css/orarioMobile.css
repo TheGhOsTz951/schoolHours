@@ -1,0 +1,50 @@
+/* --- TITLE SECTION --- */
+
+.div-title {
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+#codeTxt {
+    margin: 15px 10px -5px;
+}
+
+/* --- CODE SECTION --- */
+
+.div-code {
+    margin: 15px 5px;
+    font-size: 10px;
+}
+
+.codeShow {
+    font-size: 14px;
+}
+
+/* --- TABLE SECTION --- */
+
+.div-table {
+    margin: 0 10px;
+}
+
+.table {
+    font-size: 8px;
+    width: 30rem;
+}
+
+.table th, .table td {
+    padding: 5px;
+    width: 3rem;
+    height: 1rem;
+}
+
+/* --- COPY POPUP SECTION --- */
+
+#div-copy {
+    width: 11rem;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#copyTxt {
+    font-size: 12px;
+}

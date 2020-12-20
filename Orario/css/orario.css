@@ -26,22 +26,59 @@ body {
     user-select: none;
 }
 
+.selectable {
+    /* User can select */
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
 /* --- TITLE SECTION --- */
 
 .div-title {
     max-width: 700px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     text-align: center;
+}
+
+/* --- CODE SECTION --- */
+
+.div-code {
+    margin: 25px 10px;
+    font-style: italic;
+    text-align: center;
+    font-size: 16px;
+}
+
+.codeShow {
+    font-size: 24px;
+    font-style: normal;
+}
+
+#codeTxt {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#code {
+    display: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* --- TABLE SECTION --- */
 
 .div-table {
     overflow-x: auto;
+    margin: 0 10px 10px;
 }
 
 .table {
-    margin: 0 auto 20px;
+    margin: 0 auto 5px;
     width: 100rem;
     text-align: center;
     border-collapse: collapse;
@@ -50,10 +87,10 @@ body {
 }
 
 .table th, .table td {
-    height: 2rem;
+    height: 4rem;
     width: 9rem;
     border: 1px solid black;
-    padding: 20px;
+    padding: 10px;
 }
 
 td.actual {
@@ -71,44 +108,14 @@ td.actual {
     display: none;
 }
 
-/* --- CODE SECTION --- */
-
-#div-code {
-    display: none;
-    margin: 20px auto;
-    padding: 35px 15px;
-    max-width: 300px;
-    text-align: center;
-
-    border-radius: 15px;
-    box-shadow: 0pt 2pt 12pt 2pt gray;
-
-    /* User can select */
-    -webkit-touch-callout: text;
-    -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
-}
-
-#codeTxt {
-    font-size: 32px;
-    margin: 0;
-}
-
 /* --- COPY POPUP SECTION --- */
 
 #div-copy {
     display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 20px auto;
     padding: 10px;
     width: 400px;
     border-radius: 15px;
-    border: 0px solid black;
     box-shadow: 0pt 2pt 7pt 0pt black;
 }
 
@@ -119,7 +126,11 @@ td.actual {
   
 /* --- TABLE ELEMENTS SECTION --- */
 
-.blank, .ora {
+.table td.ora {
+    padding: 5px;
+}
+
+.blank, .ora, .gg {
     background-color: white;
 }
 
@@ -189,35 +200,3 @@ td.actual {
 .rel {
     background-color: #f2f5ff;
 }
-
-/* --- MOBILE SECTION --- */
-@media only screen and (max-width: 600px) {
-    .div-title {
-        margin: 0 10px 20px;
-        font-size: 12px;
-    }
-
-    .div-table {
-        margin: 0 10px;
-    }
-
-    .table {
-        font-size: 8px;
-        width: 30rem;
-    }
-
-    .table th, .table td {
-        padding: 5px;
-        width: 3rem;
-        height: 1rem;
-    }
-
-    #div-code {
-        max-width: 10rem;
-        padding: 20px 15px;
-    }
-
-    #codeTxt {
-        font-size: 12px;
-    }
-  }
